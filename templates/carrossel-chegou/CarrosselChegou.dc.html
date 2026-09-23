@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Carrossel · Chegou no MVRIA" description="Novidades da semana — 3 slides 1080×1350" -->
+<helmet><script src="./ds-base.js"></script><script src="./image-slot.js"></script><style>body{margin:0;background:#EDE7DF}</style></helmet>
+<div style="zoom:.4;display:flex;flex-wrap:wrap;gap:56px;padding:120px;font-family:var(--font-body);color:var(--cocoa)">
+<section data-screen-label="C1 Capa" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream)">
+<div style="position:absolute;left:0;right:0;top:0;height:1010px"><image-slot id="c1-foto" shape="rect" placeholder="Foto das novidades na arara"></image-slot></div>
+<div style="position:absolute;left:0;right:0;bottom:0;height:340px;background:var(--nude);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+<div style="display:flex;align-items:baseline;gap:24px"><span style="font-family:var(--font-script);font-size:120px;line-height:1;color:var(--caramel)">Chegou no</span><span style="font-family:var(--font-display);font-weight:600;font-size:110px;line-height:1">MVRIA</span></div>
+<div style="font-size:26px;letter-spacing:.3em;text-transform:uppercase;color:var(--caramel-deep);margin-top:12px">Peças únicas · Curadoria da semana</div>
+</div>
+<sc-if value="{{ swipeCue }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:944px;right:48px;font-size:22px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper)">Arraste →</div></sc-if>
+</section>
+<section data-screen-label="C2 Peças" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream);padding:72px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:40px 36px">
+<div style="display:flex;flex-direction:column;gap:14px;min-height:0"><div style="flex:1;min-height:0"><image-slot id="c2-p1" shape="rect" placeholder="Peça 1"></image-slot></div><div style="font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel)">Marca · Tam. M</div><div style="display:flex;justify-content:space-between;font-size:30px"><span style="font-family:var(--font-display)">Blazer de linho</span><span>R$ 129,90</span></div></div>
+<div style="display:flex;flex-direction:column;gap:14px;min-height:0"><div style="flex:1;min-height:0"><image-slot id="c2-p2" shape="rect" placeholder="Peça 2"></image-slot></div><div style="font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel)">Marca · Tam. P</div><div style="display:flex;justify-content:space-between;font-size:30px"><span style="font-family:var(--font-display)">Vestido midi</span><span>R$ 89,90</span></div></div>
+<div style="display:flex;flex-direction:column;gap:14px;min-height:0"><div style="flex:1;min-height:0"><image-slot id="c2-p3" shape="rect" placeholder="Peça 3"></image-slot></div><div style="font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel)">Marca · Tam. 38</div><div style="display:flex;justify-content:space-between;font-size:30px"><span style="font-family:var(--font-display)">Calça de alfaiataria</span><span>R$ 99,90</span></div></div>
+<div style="display:flex;flex-direction:column;gap:14px;min-height:0"><div style="flex:1;min-height:0"><image-slot id="c2-p4" shape="rect" placeholder="Peça 4"></image-slot></div><div style="font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel)">Marca · Tam. U</div><div style="display:flex;justify-content:space-between;font-size:30px"><span style="font-family:var(--font-display)">Suéter de lã</span><span>R$ 79,90</span></div></div>
+</section>
+<section data-screen-label="C3 CTA" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--ink);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:40px;padding:0 120px;box-sizing:border-box">
+<div style="font-family:var(--font-display);font-size:76px;line-height:1.15">Peças únicas.<br><i>Quando vende, não volta.</i></div>
+<div style="width:120px;height:2px;background:var(--nude)"></div>
+<div style="font-size:30px;line-height:1.5;opacity:.85">Link na bio · Entre no Grupo VIP para ver primeiro</div>
+<img src="../../assets/logo-white.png" alt="MVRIA Brechó" style="position:absolute;bottom:72px;left:50%;transform:translateX(-50%);height:64px">
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCounter&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;swipeCue&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showCounter: this.props.showCounter ?? true, swipeCue: this.props.swipeCue ?? true };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Carrossel · Guia" description="Como reconhecer qualidade numa peça — 5 slides 1080×1350" -->
+<helmet><script src="./ds-base.js"></script><script src="./image-slot.js"></script><style>body{margin:0;background:#EDE7DF}</style></helmet>
+<div style="zoom:.4;display:flex;flex-wrap:wrap;gap:56px;padding:120px;font-family:var(--font-body);color:var(--cocoa)">
+<section data-screen-label="B1 Capa" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--nude);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 110px;box-sizing:border-box">
+<div style="font-size:26px;letter-spacing:.3em;text-transform:uppercase;color:var(--caramel-deep);margin-bottom:36px">Guia MVRIA</div>
+<div style="font-family:var(--font-display);font-size:64px;letter-spacing:.14em;text-transform:uppercase;line-height:1">Como reconhecer</div>
+<div style="font-family:var(--font-display);font-weight:600;font-size:150px;line-height:1.05;margin-top:12px">qualidade</div>
+<div style="font-family:var(--font-script);font-size:120px;line-height:1.2;color:var(--caramel)">numa peça</div>
+<div style="width:120px;height:2px;background:var(--caramel);margin:40px 0 28px"></div>
+<div style="font-size:30px;color:var(--ink-2)">3 detalhes que a gente olha antes de escolher</div>
+<sc-if value="{{ swipeCue }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;bottom:64px;right:64px;font-size:24px;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel-deep)">Arraste →</div></sc-if>
+<img src="../../assets/logo-black.png" alt="MVRIA Brechó" style="position:absolute;bottom:64px;left:50%;transform:translateX(-50%);height:48px">
+</section>
+<section data-screen-label="B2 Dica 1" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream);padding:110px 96px;box-sizing:border-box;display:flex;flex-direction:column;gap:32px">
+<div style="font-family:var(--font-display);font-style:italic;font-size:180px;line-height:.9;color:var(--caramel)">01</div>
+<div style="font-size:72px;line-height:1.1">Etiqueta de composição</div>
+<p style="margin:0;font-size:34px;line-height:1.5;color:var(--ink-2)">Fibras naturais como algodão, linho, lã e seda duram mais e respiram melhor.</p>
+<div style="flex:1;min-height:0;margin-top:16px"><image-slot id="b2-foto" shape="rect" placeholder="Close da etiqueta"></image-slot></div>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:72px;right:72px;font-size:22px;letter-spacing:.2em;color:var(--caramel)">2/5</div></sc-if>
+</section>
+<section data-screen-label="B3 Dica 2" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream);padding:110px 96px;box-sizing:border-box;display:flex;flex-direction:column;gap:32px">
+<div style="font-family:var(--font-display);font-style:italic;font-size:180px;line-height:.9;color:var(--caramel)">02</div>
+<div style="font-size:72px;line-height:1.1">Costuras</div>
+<p style="margin:0;font-size:34px;line-height:1.5;color:var(--ink-2)">Puxe de leve: pontos pequenos e firmes não abrem. Fique de olho em fios soltos.</p>
+<div style="flex:1;min-height:0;margin-top:16px"><image-slot id="b3-foto" shape="rect" placeholder="Close da costura"></image-slot></div>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:72px;right:72px;font-size:22px;letter-spacing:.2em;color:var(--caramel)">3/5</div></sc-if>
+</section>
+<section data-screen-label="B4 Dica 3" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream);padding:110px 96px;box-sizing:border-box;display:flex;flex-direction:column;gap:32px">
+<div style="font-family:var(--font-display);font-style:italic;font-size:180px;line-height:.9;color:var(--caramel)">03</div>
+<div style="font-size:72px;line-height:1.1">Acabamento interno</div>
+<p style="margin:0;font-size:34px;line-height:1.5;color:var(--ink-2)">Forro inteiro, bainha bem feita e botão reserva mostram cuidado na confecção.</p>
+<div style="flex:1;min-height:0;margin-top:16px"><image-slot id="b4-foto" shape="rect" placeholder="Parte interna da peça"></image-slot></div>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:72px;right:72px;font-size:22px;letter-spacing:.2em;color:var(--caramel)">4/5</div></sc-if>
+</section>
+<section data-screen-label="B5 CTA" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--nude);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:36px;padding:0 120px;box-sizing:border-box">
+<div style="font-family:var(--font-script);font-size:170px;line-height:1;color:var(--caramel)">Salve</div>
+<div style="font-family:var(--font-display);font-size:60px;line-height:1.2">e use na sua próxima compra</div>
+<div style="width:120px;height:2px;background:var(--caramel)"></div>
+<div style="font-size:30px;line-height:1.5;color:var(--ink-2)">Toda peça do MVRIA passa por essa checagem antes de chegar até você.</div>
+<img src="../../assets/logo-black.png" alt="MVRIA Brechó" style="position:absolute;bottom:72px;left:50%;transform:translateX(-50%);height:56px">
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCounter&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;swipeCue&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showCounter: this.props.showCounter ?? true, swipeCue: this.props.swipeCue ?? true };
+  }
+}
+</script>
+</body>
+</html>

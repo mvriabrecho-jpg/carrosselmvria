@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Carrossel · Consultoria" description="Uma peça, três looks — 5 slides 1080×1350" -->
+<helmet><script src="./ds-base.js"></script><script src="./image-slot.js"></script><style>body{margin:0;background:#EDE7DF}</style></helmet>
+<div style="zoom:.4;display:flex;flex-wrap:wrap;gap:56px;padding:120px;font-family:var(--font-body);color:var(--cocoa)">
+<section data-screen-label="A1 Capa" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream)">
+<div style="position:absolute;inset:0"><image-slot id="a1-foto" shape="rect" placeholder="Foto da peça no cabide"></image-slot></div>
+<div style="position:absolute;inset:0;background:var(--photo-wash);pointer-events:none"></div>
+<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--caramel);pointer-events:none;padding:0 96px">
+<div style="font-size:26px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:20px">Consultoria MVRIA</div>
+<div style="font-size:120px;line-height:1">Uma peça,</div>
+<div style="font-family:var(--font-script);font-size:210px;line-height:1.15">três looks</div>
+<div style="width:120px;height:2px;background:var(--caramel);margin:36px 0"></div>
+<p style="margin:0;font-family:var(--font-display);font-style:italic;font-size:42px;line-height:1.4;color:var(--caramel-deep)">Como usar o mesmo blazer do trabalho ao fim de semana</p>
+</div>
+<sc-if value="{{ swipeCue }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;bottom:64px;right:64px;font-size:24px;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel)">Arraste →</div></sc-if>
+<img src="../../assets/logo-black.png" alt="MVRIA Brechó" style="position:absolute;top:64px;left:50%;transform:translateX(-50%);height:56px;pointer-events:none">
+</section>
+<section data-screen-label="A2 Look 1" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream)">
+<div style="position:absolute;left:64px;right:64px;top:64px;height:860px"><image-slot id="a2-foto" shape="rect" placeholder="Foto do look 1"></image-slot></div>
+<div style="position:absolute;left:64px;right:64px;top:972px;display:flex;gap:40px;align-items:flex-start">
+<div style="font-family:var(--font-script);font-size:150px;line-height:.9;color:var(--caramel)">1</div>
+<div style="display:flex;flex-direction:column;gap:14px;padding-top:8px"><div style="font-size:24px;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel)">Trabalho</div><div style="font-family:var(--font-display);font-size:56px;line-height:1.1">Blazer + calça de alfaiataria</div><p style="margin:0;font-size:30px;line-height:1.45;color:var(--ink-2)">Tons neutros, blazer abotoado e sapato fechado.</p></div>
+</div>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:84px;right:92px;font-size:22px;letter-spacing:.2em;color:var(--paper)">2/5</div></sc-if>
+</section>
+<section data-screen-label="A3 Look 2" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream)">
+<div style="position:absolute;left:64px;right:64px;top:64px;height:860px"><image-slot id="a3-foto" shape="rect" placeholder="Foto do look 2"></image-slot></div>
+<div style="position:absolute;left:64px;right:64px;top:972px;display:flex;gap:40px;align-items:flex-start">
+<div style="font-family:var(--font-script);font-size:150px;line-height:.9;color:var(--caramel)">2</div>
+<div style="display:flex;flex-direction:column;gap:14px;padding-top:8px"><div style="font-size:24px;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel)">Casual</div><div style="font-family:var(--font-display);font-size:56px;line-height:1.1">Blazer + jeans reto</div><p style="margin:0;font-size:30px;line-height:1.45;color:var(--ink-2)">Aberto, com camiseta branca e tênis limpo.</p></div>
+</div>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:84px;right:92px;font-size:22px;letter-spacing:.2em;color:var(--paper)">3/5</div></sc-if>
+</section>
+<section data-screen-label="A4 Look 3" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--cream)">
+<div style="position:absolute;left:64px;right:64px;top:64px;height:860px"><image-slot id="a4-foto" shape="rect" placeholder="Foto do look 3"></image-slot></div>
+<div style="position:absolute;left:64px;right:64px;top:972px;display:flex;gap:40px;align-items:flex-start">
+<div style="font-family:var(--font-script);font-size:150px;line-height:.9;color:var(--caramel)">3</div>
+<div style="display:flex;flex-direction:column;gap:14px;padding-top:8px"><div style="font-size:24px;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel)">Noite</div><div style="font-family:var(--font-display);font-size:56px;line-height:1.1">Blazer como vestido</div><p style="margin:0;font-size:30px;line-height:1.45;color:var(--ink-2)">Cinto marcando a cintura e sandália de salto.</p></div>
+</div>
+<sc-if value="{{ showCounter }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;top:84px;right:92px;font-size:22px;letter-spacing:.2em;color:var(--paper)">4/5</div></sc-if>
+</section>
+<section data-screen-label="A5 CTA" style="width:1080px;height:1350px;position:relative;overflow:hidden;flex:none;background:var(--ink);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:40px;padding:0 120px;box-sizing:border-box">
+<div style="font-family:var(--font-script);font-size:150px;line-height:1;color:var(--nude)">Gostou?</div>
+<div style="font-family:var(--font-display);font-size:64px;line-height:1.2">Esse blazer está disponível no link da bio</div>
+<div style="font-size:26px;letter-spacing:.24em;text-transform:uppercase;opacity:.8">Peça única · Salve este post</div>
+<img src="../../assets/logo-white.png" alt="MVRIA Brechó" style="position:absolute;bottom:72px;left:50%;transform:translateX(-50%);height:64px">
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCounter&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;swipeCue&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showCounter: this.props.showCounter ?? true, swipeCue: this.props.swipeCue ?? true };
+  }
+}
+</script>
+</body>
+</html>

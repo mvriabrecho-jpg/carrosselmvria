@@ -1,0 +1,10 @@
+:root{
+--font-display:'Playfair Display','Didot','Times New Roman',serif;
+--font-body:'Epilogue','Helvetica Neue',sans-serif;
+--font-script:'Pinyon Script',cursive;
+--fw-light:300;/* @kind other */--fw-regular:400;/* @kind other */--fw-medium:500;/* @kind other */--fw-semibold:600;/* @kind other */
+--fs-display-xl:72px;--fs-display-l:56px;--fs-display-m:40px;--fs-h1:32px;--fs-h2:24px;--fs-h3:19px;
+--fs-body-l:17px;--fs-body:15px;--fs-body-s:13px;--fs-caption:12px;--fs-overline:11px;
+--lh-tight:1.05;/* @kind other */--lh-heading:1.2;/* @kind other */--lh-body:1.6;/* @kind other */
+--ls-display:-0.01em;--ls-overline:0.22em;--ls-button:0.14em;--ls-wordmark:0.32em;
+}
