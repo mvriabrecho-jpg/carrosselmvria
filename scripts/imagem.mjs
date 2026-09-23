@@ -2,7 +2,7 @@
 //
 //   npm run imagem -- buscar "Milan Fashion Week 2026 runway"
 //       Lista fotos de licença livre no Wikimedia Commons (licença, autor, link).
-//   npm run imagem -- baixar <url-da-imagem> <destino.jpg>
+//   npm run imagem -- baixar <url-da-imagem> <destino.jpg>   (qualquer site: notícia, Pinterest, Commons)
 //       Baixa a foto (usa curl, que já passa pelo proxy do ambiente).
 //   npm run imagem -- banco
 //       Lista as fotos próprias em assets/banco-de-imagens (plano B).
@@ -53,7 +53,7 @@ if (cmd === 'buscar') {
   const [url, dest] = args;
   if (!url || !dest) { console.error('Uso: npm run imagem -- baixar <url> <destino>'); process.exit(1); }
   fs.mkdirSync(path.dirname(path.resolve(dest)), { recursive: true });
-  curl(url, ['-o', path.resolve(dest)]);
+  curl(url, ['-o', path.resolve(dest), '-e', new URL(url).origin + '/']);
   console.log('ok', dest, fs.statSync(dest).size, 'bytes');
 } else if (cmd === 'banco') {
   const dir = path.join(root, 'assets/banco-de-imagens');

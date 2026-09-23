@@ -28,12 +28,12 @@ A Rotina roda numa sessão nova, sem ninguém olhando. Seguir na ordem e não pu
 3. Ler a edição anterior mais recente em `templates/mvria-news/edicoes/` para não repetir notícias.
 4. Pesquisar e validar as notícias seguindo "MVRIA news — rotina semanal", "Checagem de fontes" e "Validação obrigatória" acima.
 5. Reescrever só os textos dos 7 slides no `.dc.html`, mantendo estrutura, estilos inline e tamanhos de fonte. Se um texto não couber, encurtar o texto; nunca diminuir a fonte. O slide 02 (agenda) pode ter de 3 a 6 linhas.
-6. Imagens (2 slots: capa e o slide de desfiles):
-   - `npm run imagem -- buscar "<termo em inglês>"` lista fotos de licença livre do Wikimedia Commons. Escolher foto de passarela/desfile ou arara, sem logo em destaque.
-   - `npm run imagem -- baixar <url> <pasta-da-edição>/imagens/capa.jpg` (e `desfile.jpg`).
-   - No slot: `src="AAAA-MM-DD/imagens/capa.jpg"` (caminho relativo ao `.dc.html`) e `credit="Autor · Licença"`.
-   - Se a busca falhar ou não houver foto boa: usar uma foto de `npm run imagem -- banco` (fotos próprias, sem `credit`).
-   - Nunca usar foto de veículo de notícia, de marca ou de agência (direitos autorais). Sem foto válida: deixar o slot vazio e registrar em `avisos`.
+6. Imagens (2 slots: capa e o slide de desfiles). A marca autoriza usar fotos públicas de sites de notícia, Pinterest e afins.
+   - Buscar com WebSearch/WebFetch a foto que melhor ilustra a pauta: foto do desfile ou evento citado no próprio veículo da notícia (Vogue, FFW, ELLE, WWD, FashionUnited), Pinterest (i.pinimg.com), sites oficiais das semanas de moda. Para foto livre: `npm run imagem -- buscar "<termo em inglês>"` (Wikimedia Commons).
+   - Pegar a URL direta da imagem (og:image da matéria ou o arquivo .jpg/.webp), em boa resolução (1200 px ou mais no lado maior).
+   - `npm run imagem -- baixar <url> <pasta-da-edição>/imagens/capa.jpg` (e `desfile.jpg`). Abrir o arquivo baixado para conferir que é a foto certa.
+   - No slot: `src="AAAA-MM-DD/imagens/capa.jpg"` (caminho relativo ao `.dc.html`) e `credit="Foto: <veículo ou fotógrafo>"`.
+   - Se o download for bloqueado pela rede: tentar outra fonte; depois `npm run imagem -- banco` (fotos próprias, sem `credit`). Sem foto: deixar o slot vazio e registrar em `avisos`.
 7. Preencher `edicao.json`: `legenda` (texto do post em PT-BR, tom da marca, sem emoji, 3 a 5 hashtags no fim), `fontes` (`{"nome","url"}` de cada fonte usada), `creditosImagens` (`{"nome","url"}`) e `avisos` (tudo que a dona precisa conferir antes de postar).
 8. `npm run render -- <arquivo .dc.html>` gera `slide-01.png` … `slide-07.png` na pasta da edição. Corrigir tudo que ele apontar (texto passando do slide, imagem quebrada) e abrir cada PNG para conferir visualmente antes de seguir.
 9. `npm run galeria -- <pasta da edição>` gera `index.html` (página de entrega).
